@@ -5,16 +5,18 @@ namespace PierresBakery.Models
   {
     // Public properties
     public int Amount { get; set; }
+    public int Price { get; set; }
 
     // Constructor
-    public Pastry(int amount)
+    public Pastry(int amount, int price = 0)
     {
       Amount = amount;
-      int price = 0;
+      Price = price;
     }
     public int SetPrice()
     {
-      return Amount * 2;
+      Price = Amount * 2;
+      return Price;
     }
   }
 
@@ -24,12 +26,13 @@ namespace PierresBakery.Models
   {
     // Public properties
     public int Amount { get; set; }
+    public int Price { get; set; }
 
     // Constructor
-    public Bread(int amount)
+    public Bread(int amount, int price = 0)
     {
       Amount = amount;
-      int price = 0;
+      Price = price;
     }
   }
 }
