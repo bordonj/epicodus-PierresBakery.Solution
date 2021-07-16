@@ -59,18 +59,18 @@ namespace PierresBakery.Tests
         Assert.AreEqual(2, newPastry.SetPrice());
       }
       [TestMethod]
-      public void SetPriceBasedOnAmtForBread_SetPrice_Int()
+      public void SetPriceBasedOnDealForPastry_SetPrice_Int()
       {
         //Arrange
-        int breadAmt = 1;
+        int pastryAmt = 3;
 
         //Act
-        Bread newBread = new Bread(breadAmt);
-        newBread.SetPrice();
+        Pastry newPastry = new Pastry(pastryAmt);
+        newPastry.SetPrice();
         // Item newItem = new Item(description);
 
         //Assert
-        Assert.AreEqual(5, newBread.SetPrice());
+        Assert.AreEqual(5, newPastry.SetPrice());
       }
 
 
