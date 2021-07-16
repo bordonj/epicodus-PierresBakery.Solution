@@ -8,11 +8,34 @@ namespace PierresBakery
     public static void Main()
     {
       Console.Clear();
+
+      // sets color for welcome message
+      Console.ForegroundColor = ConsoleColor.Magenta;
+      Console.BackgroundColor = ConsoleColor.Black;
       Console.WriteLine("Welcome to Pierre's Bakery!");
-      Console.WriteLine("Single loaf: $5");
-      Console.WriteLine("One Pastry: $2");
-      Console.WriteLine("Deals: Buy 2 loaves of bread get 1 free! Buy 3 pastries for $5!");
+
+      // resets color for normal prices
+      Console.ResetColor();
+      Console.WriteLine("1 Bread Loaf: $5");
+      Console.WriteLine("1 Pastry: $2");
+
+      // adds color to "DEALS" message
+      Console.ForegroundColor = ConsoleColor.Black;
+      Console.BackgroundColor = ConsoleColor.DarkGreen;
+      Console.WriteLine("DEALS");
+
+      // resets color for deal prices
+      Console.ResetColor();
+      Console.WriteLine("Buy 2 loaves of bread get 1 free!");
+      Console.WriteLine("Buy 3 pastries for a dollar off!");
+
+      // adds color for user input
+      Console.ForegroundColor = ConsoleColor.Yellow;
+      Console.BackgroundColor = ConsoleColor.Black;
       Console.WriteLine("Would you like to buy any bread or pastries? (yes/no)");
+
+      // resets color for rest of console
+      Console.ResetColor();
       string userBreadReply = Console.ReadLine();
       if (userBreadReply.ToLower() == "yes")
       {
@@ -39,8 +62,16 @@ namespace PierresBakery
         Bread newBread = new Bread(numBread);
         newBread.SetPrice();
         
-        Console.WriteLine($"{numBread} loaf(loaves) added to your cart!!");
+        Console.WriteLine($"{numBread} loaf(loaves) added to your cart!");
         Console.WriteLine($"Your total price for bread is ${newBread.Price}.");
+
+        // sets color for any key
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.BackgroundColor = ConsoleColor.Black;
+        Console.WriteLine("-- press any key to continue your order--");
+        Console.ReadKey();
+        Console.ResetColor();
+        Console.Clear();
         
         Console.WriteLine("Please enter how many pastries you would like (enter 0 if you don't want pastries):");
         string strPastry = Console.ReadLine();
@@ -50,12 +81,23 @@ namespace PierresBakery
         Pastry newPastry = new Pastry(numPastry);
         newPastry.SetPrice();
         
-        Console.WriteLine($"{numPastry} pastry(pastries) added to your cart!!");
-        Console.WriteLine($"Your total price for pastries is ${newPastry.Price}.");
-        Console.WriteLine("-- press any key to see your total price");
-        Console.ReadKey();
         Console.Clear();
+        Console.WriteLine($"{numPastry} pastry(pastries) added to your cart!");
+        Console.WriteLine($"Your total price for pastries is ${newPastry.Price}.");
+
+        // sets color for any key
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.BackgroundColor = ConsoleColor.Black;
+        Console.WriteLine("-- press any key to see your total price--");
+        Console.ReadKey();
+        Console.ResetColor();
+
+        Console.Clear();
+        // set color for total price
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.BackgroundColor = ConsoleColor.Black;
         Console.WriteLine($"Your total price is ${newPastry.Price + newBread.Price}");
+        Console.ResetColor();
         }
         catch (Exception ex)
         {
@@ -83,17 +125,10 @@ namespace PierresBakery
       WaitForAnyKeypress();
       Main();
     }
-    static void AddPastry()
-    {
-      Console.WriteLine("adding pastries tbd");
-
-      WaitForAnyKeypress();
-      Main();
-    }
 
     static void WaitForAnyKeypress()
     {
-      Console.WriteLine("-- press any key to go back to main menu");
+      Console.WriteLine("-- press any key to go back to main menu--");
       Console.ReadKey();
     }
   }
