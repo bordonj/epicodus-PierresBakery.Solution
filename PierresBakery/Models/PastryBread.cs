@@ -1,5 +1,6 @@
 namespace PierresBakery.Models
 {
+  
   public class Pastry
   {
     // Public properties
@@ -10,6 +11,10 @@ namespace PierresBakery.Models
     {
       Amount = amount;
       int price = 0;
+    }
+    public int SetPrice()
+    {
+      return Amount * 2;
     }
   }
 
