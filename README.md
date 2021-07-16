@@ -18,10 +18,10 @@ Additionally, there are deals the bakery has to offer. So, the program takes int
 2. Terminal
 3. Text Editor (Visual Studio Code)
 ## Installation Requirements
-1. Use the terminal and clone this [repository](https://github.com/bordonj/epicodus-pierresBakery.git) in your preferred directory using ```git clone https://github.com/bordonj/epicodus-pierresBakery.git```
-2. Using the terminal navigate to the project folder using ```cd epicodus-pierresBakery```
-3. Go to the test folder using ```cd PierresBakery.Tests``` and run the command ```dotnet restore``` from the terminal.
-4. Run the command ```dotnet test``` to confirm the project functionality.
+1. Use the terminal and clone this [repository](https://github.com/bordonj/epicodus-PierresBakery.Solution) in your preferred directory using ```https://github.com/bordonj/epicodus-PierresBakery.Solution.git```
+2. Using the terminal navigate to the project folder using ```cd epicodus-PierresBakery.Solution```
+3. Go to the test folder using ```cd PierresBakery.Tests``` and run the command ```dotnet restore``` from the terminal
+4. Run the command ```dotnet test``` to confirm the project functionality
 5. To run the program itself, navigate from the test folder to the `PierresBakery` directory by typing ```cd ../PierresBakery/```
 6. Inside the `PierresBakery` directory, type the command `dotnet run` in the terminal to run the executable file
 
@@ -36,7 +36,7 @@ _Note: if the command doesn't seem to run all the way, and seems like it froze, 
 Distributed under the MIT License. See LICENSE for more information.
 
 ## Known Bugs
-For users in running the exectuable program, they must enter the appropriate response. If the program asks for an amount, please type in the amount with numbers or it will get an error. Likewise, please type `yes` (not case sensitive) to begin to place orders. 
+For users in running the exectuable program, they must enter the appropriate response. If the program asks for an amount, please type in the amount with numbers or it will get an error. Likewise, please type `yes` (case insensitive) to begin to place orders. 
 
 ## Contact Information
 _jennifer.bordon@gmail.com_
