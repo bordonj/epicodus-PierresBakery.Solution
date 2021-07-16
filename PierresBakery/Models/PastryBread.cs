@@ -41,6 +41,11 @@ namespace PierresBakery.Models
     }
     public int SetPrice()
     {
+      if (Amount % 2 == 0)
+      {
+        Price = (Amount / 2) * 5;
+        return Price;
+      }
       Price = Amount * 5;
       return Price;
     }
