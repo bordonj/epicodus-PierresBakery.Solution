@@ -11,42 +11,48 @@ namespace PierresBakery
       Console.WriteLine("Welcome to Pierre's Bakery!");
       Console.WriteLine("Single loaf: $5");
       Console.WriteLine("One Pastry: $2");
-      Console.WriteLine("Deals: Buy 2 loaves of bread get 1 free!");
-      Console.WriteLine("Deals: Buy 3 pastries for $5!");
-      Console.WriteLine("Would you like to buy any loaves of bread? (yes/no)");
+      Console.WriteLine("Deals: Buy 2 loaves of bread get 1 free! Buy 3 pastries for $5!");
+      Console.WriteLine("Would you like to buy any bread or pastries? (yes/no)");
       string userBreadReply = Console.ReadLine();
       if (userBreadReply.ToLower() == "yes")
       {
-        AddBread();
+        AddFood();
       }
       else 
       {
-        Console.WriteLine("Would you like to buy any pastries?");
-        string userPastryReply = Console.ReadLine();
+        Console.WriteLine("Looks like you didn't buy anything. Please come back again if you change your mind!");
 
-        if (userPastryReply.ToLower() == "yes")
-        {
-          AddPastry();
-        }
-        else 
-        {
-          Console.WriteLine("Looks like you didn't buy anything. Please come back again if you change your mind!");
-          Main();
-        }
+        WaitForAnyKeypress();
+        Main();
       }
 
     }
 
-    static void AddBread()
+    static void AddFood()
     {
-      Console.WriteLine("Please enter how many loaves you would like");
+      Console.Clear();
+      Console.WriteLine("Please enter how many loaves you would like (enter 0 if you don't want bread):");
       string strBread = Console.ReadLine();
       int numBread = int.Parse(strBread);
       Bread newBread = new Bread(numBread);
       newBread.SetPrice();
       
-      Console.WriteLine($"{numBread} loaf(loaves)have been added to your cart!!");
+      Console.WriteLine($"{numBread} loaf(loaves) added to your cart!!");
+      Console.WriteLine($"Your total price for bread is ${newBread.Price}.");
       
+      Console.WriteLine("Please enter how many pastries you would like (enter 0 if you don't want pastries):");
+      string strPastry = Console.ReadLine();
+      int numPastry = int.Parse(strPastry);
+      Pastry newPastry = new Pastry(numPastry);
+      newPastry.SetPrice();
+      
+      Console.WriteLine($"{numPastry} pastry(pastries) added to your cart!!");
+      Console.WriteLine($"Your total price for pastries is ${newPastry.Price}.");
+      Console.WriteLine("-- press any key to see your total price");
+      Console.ReadKey();
+      Console.Clear();
+      Console.WriteLine($"Your total price is ${newPastry.Price + newBread.Price}");
+
       WaitForAnyKeypress();
       Main();
     }
