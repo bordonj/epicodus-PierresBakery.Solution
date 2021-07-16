@@ -33,25 +33,52 @@ namespace PierresBakery
       Console.Clear();
       Console.WriteLine("Please enter how many loaves you would like (enter 0 if you don't want bread):");
       string strBread = Console.ReadLine();
-      int numBread = int.Parse(strBread);
-      Bread newBread = new Bread(numBread);
-      newBread.SetPrice();
-      
-      Console.WriteLine($"{numBread} loaf(loaves) added to your cart!!");
-      Console.WriteLine($"Your total price for bread is ${newBread.Price}.");
-      
-      Console.WriteLine("Please enter how many pastries you would like (enter 0 if you don't want pastries):");
-      string strPastry = Console.ReadLine();
-      int numPastry = int.Parse(strPastry);
-      Pastry newPastry = new Pastry(numPastry);
-      newPastry.SetPrice();
-      
-      Console.WriteLine($"{numPastry} pastry(pastries) added to your cart!!");
-      Console.WriteLine($"Your total price for pastries is ${newPastry.Price}.");
-      Console.WriteLine("-- press any key to see your total price");
-      Console.ReadKey();
-      Console.Clear();
-      Console.WriteLine($"Your total price is ${newPastry.Price + newBread.Price}");
+      try
+      {
+        int numBread = int.Parse(strBread);
+        Bread newBread = new Bread(numBread);
+        newBread.SetPrice();
+        
+        Console.WriteLine($"{numBread} loaf(loaves) added to your cart!!");
+        Console.WriteLine($"Your total price for bread is ${newBread.Price}.");
+        
+        Console.WriteLine("Please enter how many pastries you would like (enter 0 if you don't want pastries):");
+        string strPastry = Console.ReadLine();
+        int numPastry = int.Parse(strPastry);
+        try
+        {
+        Pastry newPastry = new Pastry(numPastry);
+        newPastry.SetPrice();
+        
+        Console.WriteLine($"{numPastry} pastry(pastries) added to your cart!!");
+        Console.WriteLine($"Your total price for pastries is ${newPastry.Price}.");
+        Console.WriteLine("-- press any key to see your total price");
+        Console.ReadKey();
+        Console.Clear();
+        Console.WriteLine($"Your total price is ${newPastry.Price + newBread.Price}");
+        }
+        catch (Exception ex)
+        {
+          Console.WriteLine("Message = {0}", ex.Message);
+          Console.WriteLine("Source = {0}", ex.Source);
+          Console.WriteLine("StackTrace = {0}", ex.StackTrace);
+          Console.WriteLine("TargetSite = {0}", ex.TargetSite);
+
+          WaitForAnyKeypress();
+          Main();
+        }
+        
+      }
+      catch (Exception ex)
+      {
+        Console.WriteLine("Message = {0}", ex.Message);
+        Console.WriteLine("Source = {0}", ex.Source);
+        Console.WriteLine("StackTrace = {0}", ex.StackTrace);
+        Console.WriteLine("TargetSite = {0}", ex.TargetSite);
+        
+        WaitForAnyKeypress();
+        Main();
+      }
 
       WaitForAnyKeypress();
       Main();
