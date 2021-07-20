@@ -15,16 +15,16 @@ namespace PierresBakery.Models
     }
     public int SetPrice()
     {
-      if (Amount > 3)
+      if (Amount >= 3)
       {
         Price = ((Amount / 3) * 5) + ((Amount % 3) * 2);
         return Price;
       }
-      if (Amount % 3 == 0)
-      {
-        Price = (Amount / 3) * 5;
-        return Price;
-      }
+      // else if (Amount % 3 == 0)
+      // {
+      //   Price = (Amount / 3) * 5;
+      //   return Price;
+      // }
       Price = Amount * 2;
       return Price;
     }
@@ -48,14 +48,14 @@ namespace PierresBakery.Models
     {
       if (Amount > 2)
       {
-        Price = ((Amount / 2) * 5) + ((Amount % 2) * 5);
+        Price = ((Amount / 3) * 10) + ((Amount % 3) * 5);
         return Price;
       }
-      if (Amount % 2 == 0)
-      {
-        Price = (Amount / 2) * 5;
-        return Price;
-      }
+      // if (Amount % 3 == 0)
+      // {
+      //   Price = (Amount / 3) * 5;
+      //   return Price;
+      // }
       Price = Amount * 5;
       return Price;
     }
