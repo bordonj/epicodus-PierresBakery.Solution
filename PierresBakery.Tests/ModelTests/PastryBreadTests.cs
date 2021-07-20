@@ -26,7 +26,6 @@ namespace PierresBakery.Tests
 
         //Act
         Pastry newPastry = new Pastry(pastryAmt);
-        // Item newItem = new Item(description);
 
         //Assert
         Assert.AreEqual(1, newPastry.Amount);
@@ -39,7 +38,6 @@ namespace PierresBakery.Tests
 
         //Act
         Bread newBread = new Bread(breadAmt);
-        // Item newItem = new Item(description);
 
         //Assert
         Assert.AreEqual(1, newBread.Amount);
@@ -53,7 +51,6 @@ namespace PierresBakery.Tests
         //Act
         Pastry newPastry = new Pastry(pastryAmt);
         newPastry.SetPrice();
-        // Item newItem = new Item(description);
 
         //Assert
         Assert.AreEqual(2, newPastry.SetPrice());
@@ -67,7 +64,6 @@ namespace PierresBakery.Tests
         //Act
         Pastry newPastry = new Pastry(pastryAmt);
         newPastry.SetPrice();
-        // Item newItem = new Item(description);
 
         //Assert
         Assert.AreEqual(5, newPastry.SetPrice());
@@ -81,7 +77,6 @@ namespace PierresBakery.Tests
         //Act
         Bread newBread = new Bread(breadAmt);
         newBread.SetPrice();
-        // Item newItem = new Item(description);
 
         //Assert
         Assert.AreEqual(10, newBread.SetPrice());
@@ -95,7 +90,6 @@ namespace PierresBakery.Tests
         //Act
         Pastry newPastry = new Pastry(pastryAmt);
         newPastry.SetPrice();
-        // Item newItem = new Item(description);
 
         //Assert
         Assert.AreEqual(9, newPastry.SetPrice());
@@ -109,7 +103,6 @@ namespace PierresBakery.Tests
         //Act
         Bread newBread = new Bread(breadAmt);
         newBread.SetPrice();
-        // Item newItem = new Item(description);
 
         //Assert
         Assert.AreEqual(10, newBread.SetPrice());
@@ -123,7 +116,6 @@ namespace PierresBakery.Tests
         //Act
         Bread newBread = new Bread(breadAmt);
         newBread.SetPrice();
-        // Item newItem = new Item(description);
 
         //Assert
         Assert.AreEqual(15, newBread.SetPrice());
@@ -137,7 +129,6 @@ namespace PierresBakery.Tests
         //Act
         Bread newBread = new Bread(breadAmt);
         newBread.SetPrice();
-        // Item newItem = new Item(description);
 
         //Assert
         Assert.AreEqual(20, newBread.SetPrice());
@@ -151,7 +142,6 @@ namespace PierresBakery.Tests
         //Act
         Bread newBread = new Bread(breadAmt);
         newBread.SetPrice();
-        // Item newItem = new Item(description);
 
         //Assert
         Assert.AreEqual(20, newBread.SetPrice());
