@@ -9,14 +9,17 @@ This is a C# console application for a bakery that allows a user to run a progra
 Additionally, there are deals the bakery has to offer. So, the program takes into account the deals when calculating the correct price. 
 ## Technologies Used
 * C#
-* .NET
+* .NET 5.0
 * Git & GitHub
 * Markdown
 * NuGet
 ## Setup Requirements
-1. Computer (Mac/PC)
+1. Computer (macOS/PC)
+  - download [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.102-windows-x64-installer) for Windows
+  - download [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.100-macos-x64-installer) for macOS
 2. Terminal
 3. Text Editor (Visual Studio Code)
+4. download .NET SDK
 ## Installation Requirements
 1. Use the terminal and clone this [repository](https://github.com/bordonj/epicodus-PierresBakery.Solution) in your preferred directory using ```https://github.com/bordonj/epicodus-PierresBakery.Solution.git```
 2. Using the terminal navigate to the project folder using ```cd epicodus-PierresBakery.Solution```
